@@ -1,50 +1,63 @@
 .articles {
-  background: url(../images/church_1_day.jpg);
-  background-size: cover;
-  width: 100%;
-
+  background: url(../images/church_1_day.jpg) no-repeat center center/cover;
+  min-height: 100vh;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 article {
-  margin: auto;
-  width: 60%;
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+  transition: transform 0.3s ease;
+}
 
-  padding: 40px 40px 20px 40px;
-  border-radius: 25px;
-  background: #dddddd;
-  opacity: 0.9;
-
-  margin-top: 30px;
-  margin-bottom: 30px;
+article:hover {
+  transform: translateY(-5px);
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 10px;
-}
-
-p {
-  font-family: "Prata", serif;
-  letter-spacing: 0.7px;
-  line-height: 32px;
-  margin-bottom: 30px;
+  color: #241e57;
+  font-family: "Playfair Display", serif;
 }
 
 time {
   display: block;
-  margin-bottom: 30px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+p {
+  font-family: "Prata", serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 25px;
 }
 
 .more {
-  display: block;
+  display: inline-block;
+  background: #241e57;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 30px;
   text-decoration: none;
-  color: #241e57;
-  margin-bottom: 10px;
-  transition: 0.2s;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .more:hover {
-  color: #5f53cc;
+  background: #5f53cc;
+  transform: scale(1.05);
 }
