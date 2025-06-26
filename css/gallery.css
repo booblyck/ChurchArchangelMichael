@@ -1,0 +1,32 @@
+.photo {
+  width: 100%;
+  object-fit: cover;
+  height: 100vh;
+  min-height: 700px;
+}
+
+.gallery-wrapper {
+  position: relative;
+}
+
+.splide__arrow {
+  position: absolute;
+  height: 50px;
+  width: 60px;
+
+  top: calc(50% - 30px);
+  z-index: 2;
+}
+
+.splide__arrow--next {
+  right: 50px;
+}
+
+.splide__arrow--prev {
+  transform: rotate(180deg);
+  left: 50px;
+}
+
+.splide__pagination {
+  display: none;
+}

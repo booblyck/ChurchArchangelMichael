@@ -1,0 +1,50 @@
+.articles {
+  background: url(../images/church_1_day.jpg);
+  background-size: cover;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  margin: auto;
+  width: 60%;
+
+  padding: 40px 40px 20px 40px;
+  border-radius: 25px;
+  background: #dddddd;
+  opacity: 0.9;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "Prata", serif;
+  letter-spacing: 0.7px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+time {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.more {
+  display: block;
+  text-decoration: none;
+  color: #241e57;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.more:hover {
+  color: #5f53cc;
+}
