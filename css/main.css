@@ -108,37 +108,106 @@ body {
 }
 
 .burger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ===== МОБІЛЬНЕ МЕНЮ ===== */
+/* МЕНЮ як бульбашка */
 @media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav.active {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav li {
+    list-style: none;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .nav li a:hover {
+    color: #6b4eae;
+  }
+
   .burger {
     display: flex;
   }
 
+  .header {
+    position: relative;
+  }
+}
+
+/* МЕНЮ-ЗБОКУ
+@media (max-width: 768px) {
   .nav {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 220px;
+    background-color: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-top: 100px;
+    padding-left: 20px;
+    display: flex;
     flex-direction: column;
-    background: #fff;
-    display: none;
-    padding: 20px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    gap: 30px;
+    transition: right 0.4s ease;
     z-index: 1000;
-    text-align: center;
   }
 
   .nav.active {
-    display: flex;
+    right: 0;
   }
 
   .nav li {
-    margin: 10px 0;
+    list-style: none;
   }
-}
+
+  .nav li a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav li a:hover {
+    color: #6b4eae;
+  }
+
+  .burger {
+    display: flex;
+  }
+}*/
 
 /* ===== СЕКЦІЯ / ІНФО ===== */
 section {
